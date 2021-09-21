@@ -1,5 +1,5 @@
-import ApplePlayStore from 'components/svg/ApplePlayStore';
-import GooglePlayStore from 'components/svg/GooglePlayStore';
+import ApplePlayStore from './../Svg/ApplePlayStore';
+import GooglePlayStore from './../Svg/GooglePlayStore';
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { AiOutlineInstagram, AiOutlineYoutube } from 'react-icons/ai';
