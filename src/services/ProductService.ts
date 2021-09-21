@@ -1,9 +1,12 @@
 import requests from 'services/httpService';
 import { IProduct } from 'types';
-
 class ProductService {
   getProducts(): Promise<IProduct[]> {
     return requests.get('/product');
+  }
+
+  getMerchantsProducts(): Promise<IProduct[]> {
+    return requests.get('/merchant/products');
   }
 
   getProductByID(id: string): Promise<IProduct> {

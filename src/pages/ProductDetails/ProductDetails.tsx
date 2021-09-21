@@ -3,15 +3,14 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import ProductService from 'services/ProductService';
 import { IProduct } from 'types';
+import imageUrlParser from 'utils/imageUrlParser';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { useCallback } from 'react';
 import { useDispatch } from 'react-redux';
-import { addToCart } from 'redux/actions/cartAction';
-import imageUrlParser from 'utilities/imageUrlParser';
+import { addToCart } from 'redux/actionCreators/cartAction';
 interface IParams {
   id: string;
 }
-
 const ProductDetails = () => {
   const { id } = useParams<IParams>();
   const getProduct = useCallback(() => {

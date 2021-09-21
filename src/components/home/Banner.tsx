@@ -2,24 +2,25 @@ import React from 'react';
 import { Carousel, Col, Container, ListGroup, Row } from 'react-bootstrap';
 import banner1 from 'assets/images/banner1.png';
 import banner2 from 'assets/images/banner2.png';
-
 const Banner = () => {
   return (
     <div>
       <Container>
         <Row>
           <Col lg={3}>
-            <ListGroup.Item>Crast justo odio</ListGroup.Item>
-            <ListGroup.Item>Crast justo odio</ListGroup.Item>
-            <ListGroup.Item>depibus ac fecolsis</ListGroup.Item>
-            <ListGroup.Item>depibus ac fecolsis</ListGroup.Item>
-            <ListGroup.Item>lorem pna </ListGroup.Item>
-            <ListGroup.Item>lorem pna </ListGroup.Item>
-            <ListGroup.Item>asdfdfg</ListGroup.Item>
-            <ListGroup.Item>asdfdfg</ListGroup.Item>
-            <ListGroup.Item>asdfdfasfdg</ListGroup.Item>
+            <ListGroup>
+              <ListGroup.Item>Cras justo odio</ListGroup.Item>
+              <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+              <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+              <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+              <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+              <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+              <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+              <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+              <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+            </ListGroup>
           </Col>
-          <Col lg={9} className="mt-3">
+          <Col lg={9} className="mt-4">
             <Carousel>
               <Carousel.Item>
                 <img

@@ -1,5 +1,5 @@
-.header-component{
-    .top-header{
+.header__component{
+    .top-header {
         svg{
             color: $primary;
             margin-right: 6px;
@@ -19,8 +19,9 @@
                 padding: 3px;
                 text-align: center;
                 box-shadow: 0px 0px 4px #ddd;
-                border-radius: 50px;
+                border-radius: 50%;
             }
         }
     }
+    
 }
