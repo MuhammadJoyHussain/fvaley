@@ -15,7 +15,7 @@ const _nav = [
     role: ["admin", "merchant"],
 
   },
- 
+
   {
     component: CNavGroup,
     name: 'User Management',
@@ -65,7 +65,7 @@ const _nav = [
       },
     ],
   },
-  
+
 ]
 
 export default _nav

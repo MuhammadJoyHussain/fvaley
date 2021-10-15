@@ -12,7 +12,7 @@ const ProductDetails = React.lazy(
   () => import('pages/ProductDetails/ProductDetails')
 );
 
-const AppRouter: React.FC = ({ children }) => {
+const AppRouter: React.FC = () => {
   return (
     <Router>
       <DefaultLayout>

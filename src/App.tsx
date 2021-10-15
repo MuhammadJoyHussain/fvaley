@@ -1,7 +1,7 @@
 import AppRouter from './AppRouter';
 import Header from './components/common/Header';
 function App() {
-  const hello = '';
+  let hello = '';
   console.log(hello);
 
   return (

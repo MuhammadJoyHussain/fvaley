@@ -8,6 +8,7 @@ export const login = (payload: { email: string; password: string }) => {
     dispatch({
       type: ActionType.LOGIN_PENDING,
     });
+
     AuthService.login(payload)
       .then((data) => {
         dispatch({

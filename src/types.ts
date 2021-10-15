@@ -9,6 +9,16 @@ export interface IProduct {
   __v: number;
 }
 
+export interface IStore {
+  _id?: string;
+  name: string;
+  location: string;
+  image: string;
+  owner: string;
+  product: String;
+  __v: number;
+}
+
 export interface IAuthData {
   name: string;
   email: string;

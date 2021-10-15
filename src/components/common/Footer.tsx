@@ -1,9 +1,8 @@
-import ApplePlayStore from './../Svg/ApplePlayStore';
-import GooglePlayStore from './../Svg/GooglePlayStore';
-import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { AiOutlineInstagram, AiOutlineYoutube } from 'react-icons/ai';
 import { FaFacebookF } from 'react-icons/fa';
+import ApplePlayStore from './../Svg/ApplePlayStore';
+import GooglePlayStore from './../Svg/GooglePlayStore';
 
 const Footer = () => {
   return (
