@@ -12,6 +12,7 @@ export interface IProduct {
 export interface IStore {
   _id?: string;
   name: string;
+  price: number;
   location: string;
   image: string;
   owner: string;

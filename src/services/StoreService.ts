@@ -14,7 +14,7 @@ class StoreService {
     return requests.post(`/store/`, body);
   }
 
-  getStoreProduct(id: string): Promise<IStore> {
+  getStoreProduct(id: string): Promise<IStore[]> {
     return requests.get(`/store/${id}/product`);
   }
 

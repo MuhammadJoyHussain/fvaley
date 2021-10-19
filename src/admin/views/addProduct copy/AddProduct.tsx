@@ -9,8 +9,7 @@ import {
   CFormLabel,
 } from '@coreui/react';
 import { useState } from 'react';
-import { useParams } from 'react-router-dom';
-import StoreService from 'services/StoreService';
+import ProductService from 'services/ProductService';
 
 interface IFormData {
   id: string;
@@ -23,16 +22,9 @@ interface IFormData {
   __v: number;
 }
 
-interface IParams {
-  id: string;
-}
-
 const AddProduct = () => {
   const [formData, setFormData] = useState<IFormData>({} as IFormData);
   const [file, setFile] = useState<string>('');
-
-  const { id } = useParams<IParams>();
-
   const handleFileUpload = (e: any) => {
     setFile(e.target.files[0]);
   };
@@ -46,8 +38,7 @@ const AddProduct = () => {
     newFormData.append('name', formData.name);
     newFormData.append('image', file);
     newFormData.append('price', formData.price);
-    newFormData.append('store', id);
-    StoreService.addStoreProduct(id, newFormData);
+    ProductService.addProduct(newFormData);
   };
 
   return (

@@ -4,7 +4,6 @@ import {
 } from '@coreui/icons'
 import CIcon from '@coreui/icons-react'
 import { CNavGroup, CNavItem } from '@coreui/react'
-import React from 'react'
 
 const _nav = [
   {
@@ -31,7 +30,7 @@ const _nav = [
       {
         component: CNavItem,
         name: 'Merchants',
-        to: '/dashboard/merchant',
+        to: '/dashboard/merchants',
       },
     ],
   },
@@ -45,7 +44,7 @@ const _nav = [
       {
         component: CNavItem,
         name: 'Store List',
-        to: '/dashboard/users',
+        to: '/dashboard/store',
       },
     ],
   },
@@ -58,10 +57,15 @@ const _nav = [
     role: ["merchant"],
 
     items: [
+      // {
+      //   component: CNavItem,
+      //   name: 'Product List',
+      //   to: '/dashboard/products',
+      // },
       {
         component: CNavItem,
-        name: 'Product List',
-        to: '/dashboard/products',
+        name: 'Merchant Store',
+        to: '/dashboard/merchant',
       },
     ],
   },
