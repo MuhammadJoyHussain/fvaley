@@ -29,6 +29,13 @@ export interface IAuthData {
   token: string;
 }
 
+export interface IUser {
+  _id?: string;
+  name: string;
+  email: string;
+  role: string;
+}
+
 export interface IDashboardStats {
   totalUser: number;
   totalOrder: number;

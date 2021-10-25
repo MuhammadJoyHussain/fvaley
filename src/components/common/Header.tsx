@@ -88,12 +88,12 @@ const Header = () => {
           <Navbar.Brand href="#home">Categories</Navbar.Brand>
           <Nav className="ms-auto">
             <Nav.Link href="#home">News feed</Nav.Link>
-            <Nav.Link as={Link} to="/dashboard">
+            <Nav.Link as={Link} to={`/dashboard/${data?.id}`}>
               {' '}
               {data?.role === 'admin'
                 ? 'Admin'
                 : 'Dashboard' && data?.role === 'merchant'
-                ? 'Merchant Zone'
+                ? `Merchant Zone`
                 : 'Dashboard'}
             </Nav.Link>
             <Nav.Link href="#pricing">Help</Nav.Link>

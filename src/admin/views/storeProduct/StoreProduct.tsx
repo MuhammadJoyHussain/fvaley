@@ -17,7 +17,9 @@ import { Link, useParams } from 'react-router-dom';
 import { IStore } from 'types';
 import imageUrlParser from 'utils/imageUrlParser';
 import StoreService from 'services/StoreService';
+import ProductService from 'services/ProductService';
 import { FaEdit, FaPlus } from 'react-icons/fa';
+import { AiFillDelete } from 'react-icons/ai';
 
 interface IParams {
   id: string;
@@ -31,6 +33,10 @@ const StoreProduct = () => {
 
   const { data, isLoading, isSuccess, isError, error } =
     useAsync<IStore[]>(getProduct);
+
+  const deleteHandler = (id: any) => {
+    ProductService.deleteProduct(id);
+  };
 
   return (
     <div>
@@ -70,6 +76,14 @@ const StoreProduct = () => {
                     <CTableDataCell>
                       <CButton variant="outline" color="primary">
                         <FaEdit />
+                      </CButton>
+                      <CButton
+                        onClick={() => deleteHandler(product._id)}
+                        className="ms-1"
+                        variant="outline"
+                        color="primary"
+                      >
+                        <AiFillDelete />
                       </CButton>
                     </CTableDataCell>
                   </CTableRow>

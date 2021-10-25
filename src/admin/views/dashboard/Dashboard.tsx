@@ -2,7 +2,6 @@ import { cilChartPie } from '@coreui/icons';
 import CIcon from '@coreui/icons-react';
 import { CCol, CRow, CWidgetStatsF } from '@coreui/react';
 import useAsync from 'hooks/useAsync';
-import React from 'react';
 import DashboardService from 'services/DashboardService';
 
 const Dashboard = () => {

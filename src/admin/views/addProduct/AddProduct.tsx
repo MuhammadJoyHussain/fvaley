@@ -46,6 +46,7 @@ const AddProduct = () => {
     newFormData.append('name', formData.name);
     newFormData.append('image', file);
     newFormData.append('price', formData.price);
+    newFormData.append('description', formData.description);
     newFormData.append('store', id);
     StoreService.addStoreProduct(id, newFormData);
   };

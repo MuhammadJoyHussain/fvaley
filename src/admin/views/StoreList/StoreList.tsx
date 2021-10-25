@@ -11,10 +11,8 @@ import {
   CTableRow,
 } from '@coreui/react';
 import useAsync from 'hooks/useAsync';
-import React from 'react';
 import { Spinner } from 'react-bootstrap';
-import { FaEdit, FaPlus } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { AiFillDelete } from 'react-icons/ai';
 import StoreService from 'services/StoreService';
 import imageUrlParser from 'utils/imageUrlParser';
 
@@ -22,16 +20,12 @@ const StoreList = () => {
   const { data, isLoading, isSuccess, isError, error } = useAsync(
     StoreService.getStores
   );
+
   return (
     <div>
       <CCard>
         <CCardHeader className="d-flex justify-content-between">
-          Product List
-          <Link to="/dashboard/add-product">
-            <CButton variant="outline" color="primary">
-              <FaPlus /> Add Product
-            </CButton>
-          </Link>
+          Store List
         </CCardHeader>
         <CCardBody>
           <CTable>
@@ -61,7 +55,7 @@ const StoreList = () => {
                     <CTableDataCell>{store.owner}</CTableDataCell>
                     <CTableDataCell>
                       <CButton variant="outline" color="primary">
-                        <FaEdit />
+                        <AiFillDelete />
                       </CButton>
                     </CTableDataCell>
                   </CTableRow>

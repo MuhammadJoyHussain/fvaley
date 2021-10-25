@@ -4,12 +4,15 @@ import {
 } from '@coreui/icons'
 import CIcon from '@coreui/icons-react'
 import { CNavGroup, CNavItem } from '@coreui/react'
+import store from 'redux/store'
+
+const { auth: { data } } = store.getState();
 
 const _nav = [
   {
     component: CNavItem,
     name: 'Dashboard',
-    to: '/dashboard',
+    to: `/dashboard/${data?.id}`,
     icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
     role: ["admin", "merchant"],
 
@@ -43,7 +46,7 @@ const _nav = [
     items: [
       {
         component: CNavItem,
-        name: 'Store List',
+        name: 'Stores',
         to: '/dashboard/store',
       },
     ],
@@ -51,25 +54,19 @@ const _nav = [
   // For Merchant
   {
     component: CNavGroup,
-    name: 'Product Management',
-    to: '/dashboard/products',
+    name: 'Store Management',
+    to: '/dashboard/merchant',
     icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
     role: ["merchant"],
 
     items: [
-      // {
-      //   component: CNavItem,
-      //   name: 'Product List',
-      //   to: '/dashboard/products',
-      // },
       {
         component: CNavItem,
-        name: 'Merchant Store',
-        to: '/dashboard/merchant',
+        name: 'Store',
+        to: `/dashboard/${data?.id}/merchant`,
       },
     ],
   },
-
 ]
 
 export default _nav
