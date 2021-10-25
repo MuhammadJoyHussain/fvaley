@@ -12,7 +12,7 @@ const _nav = [
   {
     component: CNavItem,
     name: 'Dashboard',
-    to: `/dashboard/${data?.id}`,
+    to: `/dashboard`,
     icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
     role: ["admin", "merchant"],
 
@@ -34,6 +34,11 @@ const _nav = [
         component: CNavItem,
         name: 'Merchants',
         to: '/dashboard/merchants',
+      },
+      {
+        component: CNavItem,
+        name: 'Admins',
+        to: '/dashboard/admins',
       },
     ],
   },

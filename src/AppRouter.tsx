@@ -11,9 +11,9 @@ const Dashboard = React.lazy(() => import('./admin/layout/DefaultLayout'));
 // const StoreProduct = React.lazy(
 //   () => import('./admin/views/storeProduct/StoreProduct')
 // );
-const AddProduct = React.lazy(
-  () => import('./admin/views/addProduct/AddProduct')
-);
+// const AddProduct = React.lazy(
+//   () => import('./admin/views/addProduct/AddProduct')
+// );
 const ProductDetails = React.lazy(
   () => import('pages/ProductDetails/ProductDetails')
 );
@@ -29,7 +29,7 @@ const AppRouter: React.FC = () => {
             <Route path="/help" component={Help} />
             <Route path="/product/:id" component={ProductDetails} />
             {/* <Route path="/store/:id/product" component={StoreProduct} /> */}
-            <Route path="/store/:id/add-product" component={AddProduct} />
+            {/* <Route path="/store/:id/add-product" component={AddProduct} /> */}
             <Route path="/checkout/" component={Checkout} />
             <PrivateRoute path="/dashboard" component={Dashboard} />
           </Suspense>

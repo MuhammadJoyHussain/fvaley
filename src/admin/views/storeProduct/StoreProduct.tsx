@@ -43,7 +43,7 @@ const StoreProduct = () => {
       <CCard>
         <CCardHeader className="d-flex justify-content-between">
           Product List
-          <Link to={`/store/${id}/add-product`}>
+          <Link to={`/dashboard/store/${id}/add-product`}>
             <CButton variant="outline" color="primary">
               <FaPlus /> Add Product
             </CButton>

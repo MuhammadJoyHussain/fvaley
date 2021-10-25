@@ -24,22 +24,26 @@ const UserList = () => {
           <CTable>
             <CTableHead>
               <CTableRow>
-                <CTableHeaderCell>User Id</CTableHeaderCell>
-                <CTableHeaderCell>Image</CTableHeaderCell>
+                <CTableHeaderCell>Merchants Id</CTableHeaderCell>
                 <CTableHeaderCell>Name</CTableHeaderCell>
+                <CTableHeaderCell>Email</CTableHeaderCell>
               </CTableRow>
             </CTableHead>
             <CTableBody>
               {isLoading && <Spinner animation="border" />}
               {isSuccess &&
-                data?.map((user) => (
-                  <CTableRow key={user._id}>
-                    <CTableDataCell>{user._id}</CTableDataCell>
-                    <CTableDataCell>{user.name}</CTableDataCell>
-                    <CTableDataCell>{user.email}</CTableDataCell>
-                    <CTableDataCell></CTableDataCell>
-                  </CTableRow>
-                ))}
+                data?.map((user) =>
+                  user.role === 'merchant' ? (
+                    <CTableRow key={user._id}>
+                      <CTableDataCell>{user._id}</CTableDataCell>
+                      <CTableDataCell>{user.name}</CTableDataCell>
+                      <CTableDataCell>{user.email}</CTableDataCell>
+                      <CTableDataCell></CTableDataCell>
+                    </CTableRow>
+                  ) : (
+                    ''
+                  )
+                )}
               {isError && <h3>{error}</h3>}
             </CTableBody>
           </CTable>
